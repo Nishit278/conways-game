@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+$dark1: #404258;
+$dark2: #474e68;
+$dark3: #50577a;
+$dark4: #50577a;
+
+.app {
+    background-color: $dark2;
+    height: 100vh;
+    
+  .navbar {
+    background-color: $dark1;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    .button{
+        padding: 10px;
+        font-weight: 700;
+        background-color: $dark2;
+        border: none;
+        border-radius: 10px;
+        color: lightgray;
+        width: 90px;
+        &:hover{
+            background-color: #252634;
+        }
+    }
+  }
+  .simulator {
+    background-color: $dark2;
+    color: white;
+    height: 100%;
+    // padding:  40px 0 ;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(20, 30px);
+      .cell {
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $dark2;
+        color: black;
+        // padding: 3px 10px;
+        &:hover{
+            cursor: pointer;
+            background-color: #e5e5fd;
+        }
+      }
+      .alive {
+        background-color: rgb(86, 138, 227);
+      }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .button{
+            padding: 10px;
+            width: 170px;
+            margin: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: $dark1;
+            color: lightgray;
+            font-weight: 700;
+            height: 60px;
+            &:hover{
+                background-color: #50577a;
+            }
+        }
+    }
+  }
+}
