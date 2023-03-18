@@ -1,7 +1,7 @@
 import "./App.scss";
 import Navbar from "./components/Navbar";
 import Simulator from "./components/Simulator";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef, useState, useEffect } from "react";
 
 let numRows = 20,
   numCols = 20;
@@ -28,7 +28,35 @@ function App() {
   const [grid, setGrid] = useState(() => genGrid());
   const [running, setRunning] = useState(false);
   //   console.log(grid);
-
+  // useEffect(()=>{
+  //   if(running){
+  //    setTimeout(()=> {let gridCopy = [...grid];
+  //       for (let i = 0; i < numRows; i++) {
+  //         for (let j = 0; j < numCols; j++) {
+  //           let neighbors = 0;
+    
+  //           positions.forEach(([x, y]) => {
+  //             const newI = i + x;
+  //             const newJ = j + y;
+    
+  //             if (newI >= 0 && newI < numRows && newJ >= 0 && newJ < numCols) {
+  //               neighbors += grid[newI][newJ];
+  //             }
+  //           });
+    
+  //           if (neighbors < 2 || neighbors > 3) {
+  //             gridCopy[i][j] = 0;
+  //           } else if (grid[i][j] === 0 && neighbors === 3) {
+  //             gridCopy[i][j] = 1;
+  //           }
+  //         }
+  //       }
+    
+  //       setGrid(gridCopy);},500)
+  //   } else {
+  //     return;
+  //   }
+  // }, [running, grid])
   // ...
   const runningRef = useRef(running);
   runningRef.current = running;
