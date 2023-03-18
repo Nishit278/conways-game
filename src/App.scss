@@ -12,26 +12,30 @@ $dark3: #50577a;
 $dark4: #50577a;
 
 .app {
-    background-color: $dark2;
-    height: 100vh;
-    
+  background-color: $dark2;
+  height: 100vh;
+
   .navbar {
     background-color: $dark1;
     color: white;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    .button{
-        padding: 10px;
-        font-weight: 700;
-        background-color: $dark2;
-        border: none;
-        border-radius: 10px;
-        color: lightgray;
-        width: 90px;
-        &:hover{
-            background-color: #252634;
-        }
+    .button {
+      padding: 10px;
+      font-weight: 700;
+      background-color: $dark2;
+      border: none;
+      border-radius: 10px;
+      width: 90px;
+      &:hover {
+        background-color: #252634;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+       
+      }
     }
   }
   .simulator {
@@ -52,33 +56,33 @@ $dark4: #50577a;
         border: 1px solid $dark2;
         color: black;
         // padding: 3px 10px;
-        &:hover{
-            cursor: pointer;
-            background-color: #e5e5fd;
+        &:hover {
+          cursor: pointer;
+          background-color: #e5e5fd;
         }
       }
       .alive {
         background-color: rgb(86, 138, 227);
       }
     }
-    .buttons{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .button{
-            padding: 10px;
-            width: 170px;
-            margin: 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: $dark1;
-            color: lightgray;
-            font-weight: 700;
-            height: 60px;
-            &:hover{
-                background-color: #50577a;
-            }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .button {
+        padding: 10px;
+        width: 170px;
+        margin: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: $dark1;
+        color: lightgray;
+        font-weight: 700;
+        height: 60px;
+        &:hover {
+          background-color: #50577a;
         }
+      }
     }
   }
 }

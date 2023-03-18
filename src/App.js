@@ -13,6 +13,7 @@ const genGrid = () => {
   }
   return rows;
 };
+const linkSrc = "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
 const positions = [
   [0, 1],
   [0, -1],
@@ -99,7 +100,7 @@ function App() {
   }
   return (
     <div className="app">
-      <Navbar />
+      <Navbar link={linkSrc}/>
       <div className="simulator">
         <Simulator
           rows={numRows}
